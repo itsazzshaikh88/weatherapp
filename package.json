@@ -1,0 +1,15 @@
+{
+  "name": "expressweb",
+  "version": "1.0.0",
+  "description": "Express JS Demo First App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shaikh Azim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.2.0"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  {{>headerlinks}}
+  </head>
+  <body>
+   {{>navbar}}
+
+    <!--MAIN HEADER-->
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+            <!--LEFT SIDE DIV-->
+            <div class="col-md-6 col-12 main_header_right">
+              <figure>
+                <img
+                  src="images/404.png"
+                  class="img-fluid profile-img"
+                  alt="Shaikh Azim Profile"
+                />
+              </figure>
+            </div>
+            <!--RIGHT SIDE DIV-->
+            <div class="col-md-6 col-12 main_header_left">
+              <p>Welcome to weather app</p>
+              <h1>
+                Oops... <span class="text_clr">404</span> Page not Found
+              </h1>
+              <a href="/"><button>Go To Home</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+   {{>footer}}
+  </body>
+</html>

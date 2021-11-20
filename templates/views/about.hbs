@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  {{>headerlinks}}
+  </head>
+  <body>
+   {{>navbar}}
+
+    <!--MAIN HEADER-->
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+            <!--LEFT SIDE DIV-->
+            <div class="col-md-6 col-12 main_header_right">
+              <figure>
+                <img
+                  src="images/user-photo.png"
+                  class="img-fluid profile-img"
+                  alt="Shaikh Azim Profile"
+                />
+              </figure>
+            </div>
+            <!--RIGHT SIDE DIV-->
+            <div class="col-md-6 col-12 main_header_left">
+              <p>Welcome to weather app</p>
+              <h1>
+                I am A <span class="text_clr">Software Developer</span> at Olive Software Solution
+              </h1>
+              <a href="https://olivesofts.com/" target="_blank"><button>About Me</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+   {{>footer}}
+  </body>
+</html>

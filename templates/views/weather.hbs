@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  {{>headerlinks}}
+</head>
+
+<body>
+  {{>navbar}}
+
+  <!--MAIN HEADER-->
+  <div class="container-fluid main_header">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <div class="main_content">
+            <form class="temp_form">
+                <input type="text" placeholder="Enter City Name" id="cityName" autocomplete="off">
+                <input type="submit" value="Search" id="submitBtn">
+            </form>
+        </div>
+        <div class="tempInfo">
+            <div class="top_layer">
+                <p id="day"></p>
+                <p id="today_date"></p>
+            </div>
+            <div class="main_layer">
+                <p id="city_name">Get Output Here</p>
+                <div class="middle_layer data_hide">
+                    <p id="temp"><span id="temp_val_span">0</span><sup>o</sup>C</p>
+                    <p id="temp_status"><i class="fa fa-cloud"></i></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--FOOTER-->
+  {{>footer}}
+  <script src="js/main.js"></script>
+  <script>
+      const getCurrentDay = () => {
+      let currTime = new Date();
+      var weekDay = new Array(7);
+      weekDay[0] = "Sunday";
+      weekDay[1] = "Monday";
+      weekDay[2] = "Tuesday";
+      weekDay[3] = "Wednesday";
+      weekDay[4] = "Thursday";
+      weekDay[5] = "Friday";
+      weekDay[6] = "Saturday";
+      document.getElementById("day").innerText= weekDay[currTime.getDay()];
+    };
+    const getCurrentTime = () => {
+      var now = new Date();
+      var months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      var month = months[now.getMonth()];
+      var day = now.getDate();
+      let hours = now.getHours();
+      let mins = now.getMinutes();
+      let perios = "AM";
+      if (hours > 11) {
+        perios = "PM";
+        if (hours > 12) hours -= 12;
+      }
+      if (mins < 10) {
+        mins = "0" + mins;
+      }
+
+      document.getElementById("today_date").innerText = `${month} ${day} `;
+      {{!-- document.getElementById("today_date").innerText = `${month} ${day} | ${hours}:${mins}${perios}`; --}}
+    };
+    getCurrentDay();
+    getCurrentTime();
+  </script>
+</body>
+
+</html>
