@@ -9,7 +9,7 @@ const path_to_public_folder = path.join(__dirname, "../public");
 const temp_path = path.join(__dirname, "../templates/views");
 const partial_path = path.join(__dirname, "../templates/partials");
 app.set('view engine', 'hbs');
-app.set('views', temp_path)
+app.set('views', temp_path);
 app.use(express.static(path_to_public_folder));
 hbs.registerPartials(partial_path);
 
